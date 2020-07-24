@@ -15,7 +15,9 @@ class NewsCard extends Component {
     let { newsData } = this.props;
     return (
       <>
-        <Card className="news-card" onClick={()=>this.pageRedirection(`/news-details/${encodeURI(newsData.title)}`)}>
+      {
+        newsData ? (
+          <Card className="news-card" onClick={()=>this.pageRedirection(`/news-details/${encodeURI(newsData.title)}`)}>
           <Row gutter={12} className="news-content">
             <Col lg={6} className="news-image">
               <img src={newsData.urlToImage} alt={newsData.urlToImage}/>
@@ -33,6 +35,9 @@ class NewsCard extends Component {
           </Row>
           <NewsStats newsSource={newsData.source} newsDate={newsData.publishedAt}/>
         </Card>
+        ):null
+      }
+        
       </>
     )
   }

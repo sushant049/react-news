@@ -16,7 +16,7 @@ class NewsStats extends Component {
           <Col lg={12}>
             <Typography>
               <Text>
-                {newsSource.name}, <span className="text-light">{this.renderDate(newsDate)}</span>
+                {newsSource?newsSource.name:'All News'}, <span className="text-light">{newsDate?this.renderDate(newsDate):null}</span>
               </Text>
             </Typography>
           </Col>
