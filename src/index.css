@@ -190,3 +190,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.pageLoader {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffffba;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}

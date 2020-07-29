@@ -9,7 +9,8 @@ const InitialState = {
   news: [],
   selectedNews : {},
   topHeadlines: [],
-  relatedNews: []
+  relatedNews: [],
+  isLoading: true
 }
 
 export default (state = InitialState, {type, payload}) => {
@@ -56,6 +57,13 @@ export default (state = InitialState, {type, payload}) => {
           id: payload.id,
           name: payload.name
         }
+      }
+    }
+
+    case actionType.APP_LOADING : {
+      return {
+        ...state,
+        loading: payload
       }
     }
 
