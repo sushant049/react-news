@@ -41,7 +41,7 @@ class NewsDetailContainer extends Component {
             <Row>
               <Col lg={24} className="news-lg-image-container">
                 <p>
-                  There were some issues while fetching data
+                  Issue while getting response. Refresh page.
                 </p>
               </Col>
             </Row>

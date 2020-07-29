@@ -11,7 +11,7 @@ class RelatedNews extends Component {
           <NewsPreviewCard newsData={data} key={index} />
         )):(
           <p>
-            There were some issues while fetching data
+            Data Loading...
           </p>
         )
         }

@@ -11,7 +11,7 @@ class TopHeadlines extends Component {
           <NewsPreviewCard newsData={data} key={index} />
         )):(
           <p>
-            There were some issues while fetching data
+             Issue while getting response. Refresh page.
           </p>
         )
         }

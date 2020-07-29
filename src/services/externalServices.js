@@ -126,12 +126,12 @@ class _ExternalService {
     const headers = {
       'Content-Type': 'application/json',
       'Accept': '*/*',
-      'Access-Control-Allow-Origin': 'http://localhost:3000'
+      'Access-Control-Allow-Origin': '*'
     }
 
     if (typeof options.body === 'object') options.body = JSON.stringify(options.body);
-
-    const result = await fetch(`${this.apiDomain}${path}`, {
+    // ${this.apiDomain}
+    const result = await fetch(`https://cors-anywhere.herokuapp.com/${this.apiDomain}${path}`, {
       headers,
       ...options
     });
